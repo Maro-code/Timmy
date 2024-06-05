@@ -1,0 +1,132 @@
+#main_body{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+}
+
+#back_drop{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    left: 100px;
+    right: 100px;
+}
+
+#male_model{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(male_model.png);    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* CLOTHES */
+#tops{
+    position: absolute;
+    z-index: 5;
+    width: 500px;
+    height: 800px;    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.white_tanktop{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(White_tanktop.png);
+}
+.blue_polo{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(Blue_polo.png);
+}
+.graygreen_tee{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(GrayGreen_Tee.png);
+}
+.brown_sweatshirt{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(Brown_sweatshirt.png);
+}
+.gray_tee{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(Gray_tee.png);
+}
+.black_turtleneck{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(black_turtleneck.png);
+}
+
+
+
+#bottoms{
+    position: absolute;
+    z-index: 3;
+    width: 500px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blue_jeans{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(blue_jeans.png);
+}
+.brown_pants{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(brown_pants.png);
+}
+.gray_sweatpants{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(Gray_sweatpants.png);
+}
+.brown_shorts{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(brown_shorts.png);
+}
+
+
+
+#socks{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.white_socks{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(White_socks.png);
+}
+.black_socks{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-image: url(Black_socks.png);
+}
+
+#bground{
+    background-image: "C:\Users\23470\Documents\web\DRESS-UP PROJECT\video\birdvid-unscreen.gif";
+    background-repeat: no-repeat;
+    background-size: cover;
+}
