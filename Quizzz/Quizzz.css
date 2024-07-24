@@ -1,3 +1,6 @@
+html{
+    font-size: 18px;
+}
 body{
     margin: 20px;
 }
@@ -149,4 +152,29 @@ h2{
 .Gicon{
     color: #229822;
     font-size: 5rem;
+}
+
+@media (max-width: 501px) and (min-width:300px){
+    html{
+        font-size: 16px;
+    }
+    span{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 0.8rem;
+    }
+    .good, .bad{
+        padding: 0.5rem;
+        height: 3rem;
+    }
+    .options label{
+        font-size: 1rem;
+    }
+    .Question{
+        font-size: 1.2rem;
+    }
+    .Gicon{
+        font-size: 3rem;
+    }
 }
