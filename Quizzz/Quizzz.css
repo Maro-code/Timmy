@@ -1,0 +1,152 @@
+body{
+    margin: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem #e3e3e3;
+}
+.heading{
+    background-color: #5555ffbd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: fit-content;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+span{
+    font-size: 2rem;
+}
+h1{
+    color: #ffffff;
+}
+h2{
+    font-size: 1rem;
+    color: #282828;
+}
+.good{
+    border-right: 1px solid;
+}
+.bad{
+    border-left: 1px solid;
+}
+.good, .bad{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    height: 3.5rem;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: fit-content;
+}
+.right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.options {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.options label{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    border: 0.5px solid #d7d7d7;
+    color: #595959;
+}
+.options label:hover{
+    border: 1px solid #6767ced3;
+}
+
+.Qsection{
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+}
+.sec{
+    background-color: #c7c7debd;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+.Question{
+    font-size: 1.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#submit{
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #229822;
+    border: none;
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+#submit:hover{
+    color: #229822;
+    background-color: white;
+    border: 1px solid #229822;
+    transition: 0.2s ease-in;
+}
+#successful{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 5rem;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 1rem #e3e3e3;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 110rem;
+    left: 33.3%;
+}
+#successful #dismiss{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
+#Unsuccessful{
+    display: flex;
+    width: fit-content;
+    padding: 2rem;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 1rem #e3e3e3;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 120rem;
+    left: 33.3%;
+}
+#Unsuccessful p{
+    font-size: 1.2rem;
+    margin: 1rem 5rem;
+}
+#dismiss{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+#successful p{
+    font-size: 1.2rem;
+}
+.Gicon{
+    color: #229822;
+    font-size: 5rem;
+}
