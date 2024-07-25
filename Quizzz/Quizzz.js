@@ -16,8 +16,8 @@ questions.forEach((question, index) => {
         option.addEventListener("change", function() {
             disableAllOptions(options);
 
-            let label = option.closest("label");
-            if (option.checked) {
+            const label = option.closest("label");
+            if (option.checked === true) {
                 if (option.value === answers[index]) {
                     markAsCorrect(label);
                     score++;
@@ -72,6 +72,25 @@ function dismiss(){
     }
     
 }
+function clearRadioOptions() {
+    const radioOptions = document.querySelectorAll("input[type='radio']");
+    const labels = document.querySelectorAll("label");
+    radioOptions.forEach(option => {
+        option.checked = false; // Clear the checked state
+        option.disabled = false; // Enable the radio button
+    });
+    labels.forEach(lab => {
+        lab.style.backgroundColor = "#ffffff";
+        lab.style.color = "#595959";
+    })
+    // Reset scores and displays
+    right = 0;
+    wrong = 0;
+    score = 0;
+    correctDisplay.textContent = right;
+    incorrectDisplay.textContent = wrong;
+}
+document.getElementById("clear").addEventListener("click", clearRadioOptions);
 
 
     
