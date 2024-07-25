@@ -88,11 +88,6 @@ h2{
     font-size: 1.5rem;
     border-radius: 0 0 0.5rem 0.5rem;
 }
-.submit{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 #submit{
     padding: 0.5rem 2rem;
     font-size: 1.2rem;
@@ -100,19 +95,18 @@ h2{
     background-color: #229822;
     border: none;
     border-radius: 0.2rem;
-    margin-bottom: 0.5rem;
 }
 #submit:hover{
     color: #229822;
     background-color: white;
     border: 1px solid #229822;
-    transition: 0.2s ease-in;
+    transition: 0.2s ease-in-out;
 }
 #successful{
     display: flex;
     flex-direction: column;
     width: fit-content;
-    padding: 5rem;
+    padding: 4rem;
     align-items: center;
     background-color: #ffffff;
     box-shadow: 0 0 1rem #e3e3e3;
@@ -152,26 +146,47 @@ h2{
     color: #229822;
     font-size: 5rem;
 }
+#clear{
+    background-color: #ffffff;
+    padding: 0.5rem 2rem;
+    color: #ff2c2c;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+#clear:hover{
+    text-decoration: none;
+    border: 1px solid #ff2c2c;
+    transition: 0.2s ease-in-out;
+}
+.foot {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
 
 @media (max-width: 501px) and (min-width: 300px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
     }
     span {
         font-size: 1.5rem;
     }
     h2 {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
     .good, .bad {
-        padding: 0.5rem;
+        padding: 0 0.5rem;
         height: 3rem;
     }
     .options label {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .Question {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     #successful {
         padding: 3rem 6rem;
