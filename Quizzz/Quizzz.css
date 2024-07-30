@@ -198,13 +198,6 @@ h2{
         left: 5%;
         font-size: 1rem;
     }
-    #Unsuccessful {
-        padding: 1rem;
-        position: absolute;
-        top: 200%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
     #Unsuccessful p{
         font-size: 1rem;
         margin: 0.5rem;
