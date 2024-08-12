@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gees Notepad</title>
+    <link href="To do.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0f24fb0455.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <p>Date</p>
+        </div>
+        <div class="content">
+            <h1>To do List</h1>
+            <div id="action">
+                <input type="text" id="newTask">
+                <button id="del" onclick="removeItem()">Delete Task(s)</button>
+            </div>
+            <ul id="myList">
+            </ul>
+        </div>
+        <button id="add" onclick="additem()"><i class="fa-solid fa-plus" style="color: white; font-size: 1.5rem;"></i></button>
+
+        
+    </div>
+    <script src="To do.js"></script>
+</body>
+</html>
