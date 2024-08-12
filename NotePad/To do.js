@@ -1,3 +1,13 @@
+const currentDate = new Date();
+
+function updateDate() {
+  const now = new Date();
+  const formattedDate = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+  document.getElementById("date").innerHTML = formattedDate;
+}
+setInterval(updateDate, 1000);
+updateDate();
+
 let status = document.querySelectorAll("input[type='checkbox']");
 
 status.forEach((checkbox) => {
