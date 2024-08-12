@@ -100,9 +100,10 @@ ul li{
 }
 @media (max-width: 501px) and (min-width: 300px){
     #task p{
-        padding-right: 5rem;
+        padding-right: 1rem;
         margin-right: 2rem;
         max-width: 12rem;
+        border: 1px solid;
     }
     .content{
         padding: 0.5rem;
@@ -110,5 +111,7 @@ ul li{
     #myList{
         padding: 1rem 2rem;
     }
-
+    .container{
+        max-width: 20rem;
+    }
 }
