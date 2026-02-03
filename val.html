@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd4e8 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hearts {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            color: #ff1493;
+            font-size: 42px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
+        }
+
+        .message {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-style: italic;
+            padding: 0 20px;
+        }
+
+        .question {
+            font-size: 28px;
+            color: #ff1493;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+        }
+
+        .btn-yes:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
+        }
+
+        .btn-no {
+            background: linear-gradient(135deg, #ddd, #bbb);
+            color: #666;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-no:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin: 0 0 25px 25%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .modal-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff1493;
+        }
+
+        .modal-content p {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .close-btn {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+
+            .question {
+                font-size: 24px;
+            }
+
+            button {
+                padding: 12px 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="hearts">💕💖💕</div>
+            <h1>Will You Be My Valentine?</h1>
+            
+            <div class="message">
+                <!-- REPLACE THIS MESSAGE WITH YOUR OWN ROMANTIC MESSAGE -->
+                Hey baby lion 🙃 From the very first day I laid my eyes on you, you've captured my heart. 
+                Your smile and the aura that surrounds you is simply way too captivating that I still get butterflies when I'm around you.
+                You make me feel calm in ways no one else can. I love that we can just be kids around each other jumping around playing without a care in the world.
+                On that note, I would love to ask you,
+                <!-- END OF MESSAGE -->
+            </div>
+
+            <div class="question">Will you be my Valentine? 🌹</div>
+
+            <div class="buttons">
+                <button class="btn-yes" onclick="handleYes()">Yes! 💖</button>
+                <button class="btn-no" onclick="handleNo()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for responses -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img id="modal-image" class="modal-image" src="" alt="Response image">
+            <h2 id="modal-title"></h2>
+            <p id="modal-message"></p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Hidden form for FormSpree -->
+    <form id="valentine-form" style="display: none;">
+        <input type="hidden" name="response" id="response-input">
+        <input type="hidden" name="timestamp" id="timestamp-input">
+        <input type="text" name="_gotcha" style="display:none">
+    </form>
+
+    <script>
+        // ========================================
+        // CONFIGURATION: Replace with your details
+        // ========================================
+        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdvlzpr';
+        
+        // Image URLs for modal responses
+        const YES_IMAGE_URL = './goofy.jpg'; // Replace with your "Yes" image URL
+        const NO_IMAGE_URL = './toddler.jpg';   // Replace with your "No" image URL
+        
+        function handleYes() {
+            // Show success modal with image
+            showModal('Yayyyy! 🥳', 'I love youu 🥹😘', YES_IMAGE_URL);
+            
+            // Send notification to email via FormSpree
+            sendToFormSpree('Yes! She said YES! 💖');
+        }
+
+        function handleNo() {
+            // Show rejection modal with image
+            showModal('Wrong answer!', 'Try again 🙄', NO_IMAGE_URL);
+            
+            // Optionally send "No" response (uncomment if you want to track rejections)
+            // sendToFormSpree('No - She clicked No 😢');
+        }
+
+        function showModal(title, message, imageUrl) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-message').textContent = message;
+            
+            // Set the image source
+            if (imageUrl && imageUrl !== 'YOUR_YES_IMAGE_URL_HERE' && imageUrl !== 'YOUR_NO_IMAGE_URL_HERE') {
+                modalImage.src = imageUrl;
+                modalImage.style.display = 'block';
+            } else {
+                modalImage.style.display = 'none';
+            }
+            
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        async function sendToFormSpree(message) {
+            try {
+                const now = new Date();
+                const timestamp = now.toLocaleString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                });
+
+                // Create form data object
+                const data = {
+                    subject: '💖 Valentine Response - She Said YES!',
+                    message: message,
+                    response: 'YES',
+                    timestamp: timestamp,
+                    _replyto: 'noreply@valentine.com',
+                    _subject: '💖 Valentine Response - She Said YES!'
+                };
+
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const result = await response.json();
+                
+                if (response.ok) {
+                    console.log('Email sent successfully!', result);
+                } else {
+                    console.error('FormSpree error:', result);
+                }
+            } catch (error) {
+                console.error('Error sending to FormSpree:', error);
+            }
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
