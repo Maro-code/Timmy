@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Timmy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="./images/portfolio icon.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo2">
+                <div class="logo">TIMMY</div>
+                <p class="role">UI/UX</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">About</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="ITHIME-CV2.pdf" target="_blank"  class="btn-cv">Download CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="portfolio-header">
+            <h1>My Work</h1>
+            <p>Exploring creativity through design and development</p>
+        </div>
+
+        <div class="projects-container">
+            <!-- Project 1: Ecowatch -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="./images/ecowatch.png" alt="Ecowatch App">
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">Mobile App</span>
+                    <h2 class="project-title">Ecowatch</h2>
+                    <p class="project-overview">
+                        Ecowatch is a community-powered safety application designed to keep users informed about environmental hazards,
+                        accidents, and civil unrest in real time. This project is a complete overhaul of an app I originally designed a year ago.
+                        As my design maturity evolved, I realized the initial concept prioritized "social engagement" over "safety utility." 
+                        I revisited the project to solve the core user problems of speed, trust, and clarity.
+                    </p>
+                    <a href="project-details.html?project=access-more" class="view-details-btn">
+                        View Details
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Project 2: Coffee -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="./images/Focus.png" alt="Coffee App">
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">Mobile App</span>
+                    <h2 class="project-title">Focus</h2>
+                    <p class="project-overview">
+                        Daily Focus is a minimalist mobile micro‑experience designed to help users identify and commit to one meaningful priority for 
+                        the day. Instead of functioning as a full productivity or task‑management app, it focuses on a single moment: helping users 
+                        decide what truly matters today.
+                    </p>
+                    <a href="project-details.html?project=coffee" class="view-details-btn">
+                        View Details
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="simple-footer">
+        <p>&copy; 2025 Timmy. All rights reserved.</p>
+    </footer>
+    <div class="cursor-dot"></div>
+
+    <div class="scroll-character">T</div>
+    <script src="script.js"></script>
+</body>
+</html>

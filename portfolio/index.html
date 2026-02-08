@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gideon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="./images/portfolio icon.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo2">
+                <div class="logo">TIMMY</div>
+                <p class="role">UI/UX</p>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link active">About</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="ITHIME-CV2.pdf" target="_blank"  class="btn-cv">Download CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <!-- About Me -->
+                <div class="about-box">
+                    <h1 class="greeting">HI GUYS 👋, TIMMY HERE</h1>
+                    <p class="description">
+                        I am a passionate UI/UX designer dedicated to creating intuitive and engaging user
+                        experiences that not only look great but also function seamlessly. My journey in design
+                        has been driven by a desire to solve problems and bring ideas to life through thoughtful,
+                        user-centered design.
+                    </p>
+                    <p class="description">
+                        Feel free to explore my work, and don't hesitate to reach out if you
+                        have any questions or if you'd like to collaborate!
+                    </p>
+                </div>
+
+                <!-- My View of UI/UX Design -->
+                <div class="about-box">
+                    <h2 class="section-title">My View of UI/UX Design</h2>
+                    <p class="description">
+                        UI/UX design is more than just aesthetics—it's about understanding people, their needs, 
+                        and crafting experiences that feel natural and effortless. I believe great design is invisible; 
+                        it guides users seamlessly toward their goals without friction or confusion.
+                    </p>
+                    <p class="description">
+                        Every project I undertake begins with empathy. By putting myself in the user's shoes, 
+                        I can anticipate challenges and create solutions that are not only functional but delightful. 
+                        Design should empower users, making complex tasks simple and transforming everyday interactions 
+                        into memorable experiences.
+                    </p>
+                    <p class="description">
+                        My approach combines research, creativity, and continuous iteration. I'm committed to staying 
+                        current with design trends while maintaining a focus on timeless principles of usability 
+                        and accessibility.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Profile Image -->
+            <div class="about-image">
+                <div class="image-wrapper">
+                    <img src="C:\Users\23470\Downloads\portfolio\images\profile.jpg" alt="Timmy - UI/UX Designer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="contact-footer">
+        <div class="contact-container">
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-subtitle">Have a project in mind? Let's work together!</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/xjgebnny" method="POST">
+                <!-- Hidden field for better email formatting -->
+                <input type="hidden" name="_subject" value="New Portfolio Contact from Website">
+                <input type="hidden" name="_template" value="box">
+                
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="John Doe" 
+                        required>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="john@example.com" 
+                        required>
+                </div>
+
+                <!-- Phone Field -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="+234 800 000 0000">
+                </div>
+
+                <!-- Subject Field -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        placeholder="Project Inquiry" 
+                        required>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="6" 
+                        placeholder="Tell me about your project..." 
+                        required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <h4>Email</h4>
+                    <p><a href="mailto:timilehin332@gmail.com">timilehin332@gmail.com</a></p>
+                </div>
+                <div class="info-item">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+2347053335558">+234 705 333 5558</a></p>
+                </div>
+                <div class="info-item">
+                    <h4>Location</h4>
+                    <p>Lagos, Nigeria</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Timmy. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="cursor-dot"></div>
+
+    <div class="scroll-character">T</div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Timmy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="./images/portfolio icon.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo2">
+                <div class="logo">TIMMY</div>
+                <p class="role">UI/UX</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">About</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="ITHIME-CV2.pdf" target="_blank"  class="btn-cv">Download CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Details Section -->
+    <section class="project-details-section">
+        <div class="back-button">
+            <a href="portfolio.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Portfolio
+            </a>
+        </div>
+
+        <!-- Project Header -->
+        <div class="project-header-detail">
+            <span class="project-tag" id="project-tag">Mobile App</span>
+            <h1 id="project-title">Project Title</h1>
+            <p id="project-subtitle">Project Subtitle</p>
+        </div>
+
+        <!-- Image Carousel -->
+        <div class="carousel-container">
+            <a href="https://www.figma.com/proto/AyP0nfIWgUJ1zvqUrflMY8/Portfolio?page-id=56%3A197&node-id=117-2420&p=f&viewport=1218%2C1511%2C0.36&t=QPwlAQk8RgL9iny1-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=89%3A2727" target="_blank"  id="prototypebtn" class="view-details-btn2">View Prototype</a>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" aria-label="Previous image">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-slides" id="carousel-slides">
+                    <!-- Images will be loaded dynamically -->
+                </div>
+                
+                <button class="carousel-btn next-btn" aria-label="Next image">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="carousel-indicators" id="carousel-indicators">
+                <!-- Indicators will be loaded dynamically -->
+            </div>
+        </div>
+
+        <!-- Case Study -->
+        <div class="case-study">
+            <h2 class="case-study-title">Case Study</h2>
+            
+            <div class="case-study-content" id="case-study-content">
+                <!-- Case study content will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="simple-footer">
+        <p>&copy; 2025 Timmy. All rights reserved.</p>
+    </footer>
+    <div class="cursor-dot"></div>
+
+    <div class="scroll-character">T</div>
+    <script src="project-details.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
